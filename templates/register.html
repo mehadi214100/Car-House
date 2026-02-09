@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AutoDealer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .register-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-red-600 text-2xl mr-2"></i>
+                <a href="index.html" class="text-2xl font-bold text-gray-800">AutoDealer</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-700 hover:text-red-600">Home</a>
+                <a href="login.html" class="text-gray-700 hover:text-red-600">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <section class="register-bg py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <!-- Left Column - Form -->
+                    <div class="md:w-2/3 p-6 md:p-8">
+                        <div class="mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">Create Your Account</h2>
+                            <p class="text-gray-600">Join thousands of car buyers and sellers on AutoDealer</p>
+                        </div>
+                        
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="first-name">First Name</label>
+                                    <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="John">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="john@example.com">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="password">Password</label>
+                                    <input type="password" id="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Create a password">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="confirm-password">Confirm Password</label>
+                                    <input type="password" id="confirm-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Confirm your password">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="(555) 123-4567">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Account Type</label>
+                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="account-type" value="buyer" class="mr-2" checked>
+                                        <span>I want to buy a car</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="account-type" value="seller" class="mr-2">
+                                        <span>I want to sell a car</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="account-type" value="both" class="mr-2">
+                                        <span>Both</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2">
+                                    <span class="text-gray-700">I agree to the <a href="#" class="text-red-600">Terms of Service</a> and <a href="#" class="text-red-600">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700">Create Account</button>
+                            
+                            <div class="text-center mt-4">
+                                <span class="text-gray-600">Already have an account?</span>
+                                <a href="login.html" class="text-red-600 font-semibold ml-2 hover:text-red-800">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Right Column - Benefits -->
+                    <div class="md:w-1/3 bg-red-50 p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Benefits of Joining</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-heart text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Save Favorites</h4>
+                                    <p class="text-gray-600 text-sm">Save cars you like and compare them side by side</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-bell text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Price Alerts</h4>
+                                    <p class="text-gray-600 text-sm">Get notified when prices drop on saved cars</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-history text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">View History</h4>
+                                    <p class="text-gray-600 text-sm">Keep track of cars you've viewed and contacted</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-car text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">List Your Car</h4>
+                                    <p class="text-gray-600 text-sm">Sell your car faster with our trusted platform</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-shield-alt text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Safe & Secure</h4>
+                                    <p class="text-gray-600 text-sm">Your information is protected with encryption</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-car text-red-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold">AutoDealer</span>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">&copy; 2023 AutoDealer. All rights reserved.</p>
+                    <div class="mt-2">
+                        <a href="index.html" class="text-gray-400 hover:text-white mr-4">Home</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

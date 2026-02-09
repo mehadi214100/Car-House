@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Camry 2022 - AutoDealer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-red-600 text-2xl mr-2"></i>
+                <a href="index.html" class="text-2xl font-bold text-gray-800">AutoDealer</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-red-600">Home</a>
+                <a href="all-cars.html" class="text-gray-700 hover:text-red-600">All Cars</a>
+                <a href="sell-car.html" class="text-gray-700 hover:text-red-600">Sell Car</a>
+                <a href="about.html" class="text-gray-700 hover:text-red-600">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-red-600">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-gray-700 hover:text-red-600">Login</a>
+                <a href="register.html" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700">Register</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-700">Home</a>
+            <a href="all-cars.html" class="block py-2 text-gray-700">All Cars</a>
+            <a href="sell-car.html" class="block py-2 text-gray-700">Sell Car</a>
+            <a href="about.html" class="block py-2 text-gray-700">About</a>
+            <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <div class="text-sm text-gray-600">
+            <a href="index.html" class="hover:text-red-600">Home</a> &gt;
+            <a href="all-cars.html" class="hover:text-red-600">All Cars</a> &gt;
+            <span class="text-gray-800">Toyota Camry 2022</span>
+        </div>
+    </div>
+
+    <!-- Car Details -->
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column - Car Images & Info -->
+            <div class="lg:w-2/3">
+                <!-- Main Image -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                         alt="Toyota Camry 2022" class="w-full h-96 object-cover">
+                </div>
+                
+                <!-- Thumbnail Images -->
+                <div class="flex space-x-2 mb-8 overflow-x-auto">
+                    <div class="flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                             alt="Car" class="w-24 h-20 object-cover rounded cursor-pointer border-2 border-red-600">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                             alt="Car Interior" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" 
+                             alt="Car Side" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                             alt="Car Back" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
+                    </div>
+                </div>
+                
+                <!-- Car Details Tabs -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <!-- Tabs Header -->
+                    <div class="border-b">
+                        <div class="flex">
+                            <button class="tab-btn py-4 px-6 font-semibold text-red-600 border-b-2 border-red-600">Overview</button>
+                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">Specifications</button>
+                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">Features</button>
+                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">History</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Content -->
+                    <div class="p-6">
+                        <div id="overview" class="tab-content">
+                            <h3 class="text-xl font-bold mb-4">Vehicle Overview</h3>
+                            <p class="text-gray-700 mb-4">This 2022 Toyota Camry SE is a one-owner vehicle with a clean title and no accidents. It has been regularly serviced at the dealership and comes with all service records. The car is in excellent condition both inside and out.</p>
+                            
+                            <h4 class="font-bold mb-2">Key Highlights:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 mb-4">
+                                <li>One owner with clean title</li>
+                                <li>No accidents or damage</li>
+                                <li>Regular maintenance with full service records</li>
+                                <li>Low mileage for the year</li>
+                                <li>Still under factory warranty</li>
+                                <li>Excellent fuel economy (28 city / 39 highway)</li>
+                            </ul>
+                            
+                            <p class="text-gray-700">This Camry comes equipped with the SE Convenience Package which includes moonroof, dual-zone automatic climate control, smart key system with push-button start, and more. All safety features are fully functional and the car has passed a rigorous inspection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Pricing & Seller Info -->
+            <div class="lg:w-1/3">
+                <!-- Price Card -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-2xl font-bold mb-2">Toyota Camry 2022 SE</h2>
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl font-bold text-red-600">$24,500</span>
+                        <span class="ml-2 text-gray-500">or $420/month</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Mileage:</span>
+                            <span class="font-semibold">15,000 miles</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Location:</span>
+                            <span class="font-semibold">Detroit, MI</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Exterior Color:</span>
+                            <span class="font-semibold">Midnight Black</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Interior Color:</span>
+                            <span class="font-semibold">Black Leather</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Transmission:</span>
+                            <span class="font-semibold">Automatic</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Fuel Type:</span>
+                            <span class="font-semibold">Gasoline</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-2"></i> Contact Seller
+                        </button>
+                        <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 flex items-center justify-center">
+                            <i class="fas fa-envelope mr-2"></i> Send Message
+                        </button>
+                        <button class="w-full border border-red-600 text-red-600 py-3 rounded-lg font-semibold hover:bg-red-50 flex items-center justify-center">
+                            <i class="far fa-heart mr-2"></i> Save to Favorites
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Seller Info -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-bold mb-4">Seller Information</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">AutoMax Dealership</h4>
+                            <p class="text-gray-600 text-sm">Certified Dealer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-500 mr-3"></i>
+                            <span>123 Dealership Ave, Detroit, MI</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gray-500 mr-3"></i>
+                            <span>(555) 987-6543</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gray-500 mr-3"></i>
+                            <span>contact@automax.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t">
+                        <h4 class="font-bold mb-2">Dealer Rating</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 font-semibold">4.7/5</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Based on 128 reviews</p>
+                    </div>
+                </div>
+                
+                <!-- Financing Calculator -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Financing Calculator</h3>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Loan Amount</label>
+                        <input type="range" min="5000" max="50000" value="24500" class="w-full mb-2">
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>$5,000</span>
+                            <span class="font-semibold">$24,500</span>
+                            <span>$50,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Loan Term</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none">
+                            <option>24 months</option>
+                            <option selected>36 months</option>
+                            <option>48 months</option>
+                            <option>60 months</option>
+                            <option>72 months</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Interest Rate</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none">
+                            <option>3.5% (Excellent Credit)</option>
+                            <option selected>4.5% (Good Credit)</option>
+                            <option>6.5% (Fair Credit)</option>
+                            <option>9.5% (Poor Credit)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">Monthly Payment:</span>
+                            <span class="text-xl font-bold text-red-600">$420</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Based on 36 months at 4.5% APR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Similar Cars Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Similar Cars You Might Like</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Similar Car 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                         alt="Car" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1">Honda Accord 2021</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sedan • Automatic • 18,000 miles</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-red-600">$22,300</span>
+                            <a href="car-details.html" class="bg-gray-800 text-white px-3 py-1 rounded text-sm hover:bg-gray-900">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Car 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                         alt="Car" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1">Chevrolet Malibu 2022</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sedan • Automatic • 12,000 miles</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-red-600">$20,800</span>
+                            <a href="car-details.html" class="bg-gray-800 text-white px-3 py-1 rounded text-sm hover:bg-gray-900">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Car 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                         alt="Car" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1">Nissan Altima 2021</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sedan • Automatic • 20,000 miles</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-red-600">$19,900</span>
+                            <a href="car-details.html" class="bg-gray-800 text-white px-3 py-1 rounded text-sm hover:bg-gray-900">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Car 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" 
+                         alt="Car" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1">Hyundai Sonata 2022</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sedan • Automatic • 14,000 miles</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-red-600">$21,500</span>
+                            <a href="car-details.html" class="bg-gray-800 text-white px-3 py-1 rounded text-sm hover:bg-gray-900">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-red-600 text-2xl mr-2"></i>
+                        <span class="text-2xl font-bold">AutoDealer</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted partner for buying and selling vehicles since 2010.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="all-cars.html" class="text-gray-400 hover:text-white">All Cars</a></li>
+                        <li><a href="sell-car.html" class="text-gray-400 hover:text-white">Sell Your Car</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-red-600"></i>
+                            123 Auto Street, Detroit, MI
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-red-600"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-red-600"></i>
+                            info@autodealer.com
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and special offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow p-3 text-gray-800 rounded-l-lg focus:outline-none">
+                        <button class="bg-red-600 px-4 rounded-r-lg hover:bg-red-700">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 AutoDealer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Simple tab switching
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-btn').forEach(tab => {
+                    tab.classList.remove('text-red-600', 'border-red-600', 'border-b-2');
+                    tab.classList.add('text-gray-600');
+                });
+                
+                // Add active class to clicked tab
+                this.classList.remove('text-gray-600');
+                this.classList.add('text-red-600', 'border-red-600', 'border-b-2');
+            });
+        });
+    </script>
+</body>
+</html>
