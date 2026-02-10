@@ -13,14 +13,16 @@ class HomeView(TemplateView):
 
 class AllCarsView(ListView):
     template_name = 'all-cars.html'
-    model = User
+    model = Car
+    context_object_name = 'cars'
+    paginate_by = 2
 
 
 class SellCarsView(LoginRequiredMixin,CreateView):
     template_name = 'sell-car.html'
     model = Car
     form_class = SellForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('all_cars')
     
     def form_valid(self, form):
         form.instance.owner = self.request.user
