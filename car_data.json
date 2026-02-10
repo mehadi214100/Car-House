@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Toyota",
+        "models": ["Corolla", "Camry", "Prius", "Axio", "Allion", "Premio", "RAV4", "Land Cruiser", "Highlander"]
+    },
+    {
+        "name": "Honda",
+        "models": ["Civic", "Accord", "City", "Vezel", "CR-V", "HR-V", "Fit", "Insight"]
+    },
+    {
+        "name": "Nissan",
+        "models": ["X-Trail", "Altima", "Sunny", "Juke", "Patrol", "GT-R", "Leaf"]
+    },
+    {
+        "name": "Ford",
+        "models": ["Mustang", "F-150", "Focus", "Fiesta", "Explorer", "Escape", "Ranger"]
+    },
+    {
+        "name": "BMW",
+        "models": ["3 Series", "5 Series", "7 Series", "X1", "X3", "X5", "M3", "M5"]
+    },
+    {
+        "name": "Mercedes-Benz",
+        "models": ["C-Class", "E-Class", "S-Class", "A-Class", "GLA", "GLC", "GLE", "G-Wagon"]
+    },
+    {
+        "name": "Audi",
+        "models": ["A3", "A4", "A6", "A8", "Q3", "Q5", "Q7", "R8"]
+    },
+    {
+        "name": "Hyundai",
+        "models": ["Sonata", "Elantra", "Tucson", "Santa Fe", "Kona", "Venue"]
+    },
+    {
+        "name": "Kia",
+        "models": ["Sportage", "Sorento", "Picanto", "Rio", "Cerato", "Carnival"]
+    },
+    {
+        "name": "Tesla",
+        "models": ["Model S", "Model 3", "Model X", "Model Y", "Cybertruck"]
+    }
+]

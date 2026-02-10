@@ -15,4 +15,4 @@ class UserLoginView(LoginView):
     template_name = 'login.html'
    
     def get_success_url(self):
-        return reverse_lazy('home')
+        return self.request.GET.get('next') or self.request.POST.get('next') or reverse_lazy('home')
