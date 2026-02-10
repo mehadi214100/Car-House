@@ -2,14 +2,8 @@
 
 {% block title %}All Cars{% endblock title %}
 {% block content %}
-    <!-- Breadcrumb -->
-    <div class="container mx-auto px-4 py-4">
-        <div class="text-sm text-gray-600">
-            <a href="index.html" class="hover:text-red-600">Home</a> &gt;
-            <a href="all-cars.html" class="hover:text-red-600">All Cars</a> &gt;
-            <span class="text-gray-800">Toyota Camry 2022</span>
-        </div>
-    </div>
+
+
 
     <!-- Car Details -->
     <div class="container mx-auto px-4 py-6">
@@ -18,29 +12,10 @@
             <div class="lg:w-2/3">
                 <!-- Main Image -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
-                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                    <img src="{{car.image.url}}" 
                          alt="Toyota Camry 2022" class="w-full h-96 object-cover">
                 </div>
                 
-                <!-- Thumbnail Images -->
-                <div class="flex space-x-2 mb-8 overflow-x-auto">
-                    <div class="flex-shrink-0">
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
-                             alt="Car" class="w-24 h-20 object-cover rounded cursor-pointer border-2 border-red-600">
-                    </div>
-                    <div class="flex-shrink-0">
-                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
-                             alt="Car Interior" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
-                    </div>
-                    <div class="flex-shrink-0">
-                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" 
-                             alt="Car Side" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
-                    </div>
-                    <div class="flex-shrink-0">
-                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
-                             alt="Car Back" class="w-24 h-20 object-cover rounded cursor-pointer hover:border-2 hover:border-red-600">
-                    </div>
-                </div>
                 
                 <!-- Car Details Tabs -->
                 <div class="bg-white rounded-lg shadow-md">
@@ -48,29 +23,14 @@
                     <div class="border-b">
                         <div class="flex">
                             <button class="tab-btn py-4 px-6 font-semibold text-red-600 border-b-2 border-red-600">Overview</button>
-                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">Specifications</button>
-                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">Features</button>
-                            <button class="tab-btn py-4 px-6 font-semibold text-gray-600 hover:text-red-600">History</button>
                         </div>
                     </div>
                     
                     <!-- Tab Content -->
                     <div class="p-6">
                         <div id="overview" class="tab-content">
-                            <h3 class="text-xl font-bold mb-4">Vehicle Overview</h3>
-                            <p class="text-gray-700 mb-4">This 2022 Toyota Camry SE is a one-owner vehicle with a clean title and no accidents. It has been regularly serviced at the dealership and comes with all service records. The car is in excellent condition both inside and out.</p>
-                            
-                            <h4 class="font-bold mb-2">Key Highlights:</h4>
-                            <ul class="list-disc pl-5 text-gray-700 mb-4">
-                                <li>One owner with clean title</li>
-                                <li>No accidents or damage</li>
-                                <li>Regular maintenance with full service records</li>
-                                <li>Low mileage for the year</li>
-                                <li>Still under factory warranty</li>
-                                <li>Excellent fuel economy (28 city / 39 highway)</li>
-                            </ul>
-                            
-                            <p class="text-gray-700">This Camry comes equipped with the SE Convenience Package which includes moonroof, dual-zone automatic climate control, smart key system with push-button start, and more. All safety features are fully functional and the car has passed a rigorous inspection.</p>
+                            <p class="text-gray-700 mb-4">{{car.description}}</p>
+                           
                         </div>
                     </div>
                 </div>
@@ -80,10 +40,10 @@
             <div class="lg:w-1/3">
                 <!-- Price Card -->
                 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                    <h2 class="text-2xl font-bold mb-2">Toyota Camry 2022 SE</h2>
+                    <h2 class="text-2xl font-bold mb-2">{{car.title}}</h2>
                     <div class="flex items-center mb-4">
-                        <span class="text-3xl font-bold text-red-600">$24,500</span>
-                        <span class="ml-2 text-gray-500">or $420/month</span>
+                        <span class="text-3xl font-bold text-red-600">BDT {{car.price}}</span>
+                        
                     </div>
                     
                     <div class="mb-6">
@@ -117,12 +77,6 @@
                         <button class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 flex items-center justify-center">
                             <i class="fas fa-phone-alt mr-2"></i> Contact Seller
                         </button>
-                        <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 flex items-center justify-center">
-                            <i class="fas fa-envelope mr-2"></i> Send Message
-                        </button>
-                        <button class="w-full border border-red-600 text-red-600 py-3 rounded-lg font-semibold hover:bg-red-50 flex items-center justify-center">
-                            <i class="far fa-heart mr-2"></i> Save to Favorites
-                        </button>
                     </div>
                 </div>
                 
@@ -134,7 +88,7 @@
                             <i class="fas fa-user text-red-600 text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold">AutoMax Dealership</h4>
+                            <h4 class="font-bold">{{car.owner.first_name}}</h4>
                             <p class="text-gray-600 text-sm">Certified Dealer</p>
                         </div>
                     </div>
@@ -154,64 +108,8 @@
                         </div>
                     </div>
                     
-                    <div class="mt-6 pt-6 border-t">
-                        <h4 class="font-bold mb-2">Dealer Rating</h4>
-                        <div class="flex items-center mb-2">
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="ml-2 font-semibold">4.7/5</span>
-                        </div>
-                        <p class="text-sm text-gray-600">Based on 128 reviews</p>
-                    </div>
                 </div>
                 
-                <!-- Financing Calculator -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold mb-4">Financing Calculator</h3>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 mb-2">Loan Amount</label>
-                        <input type="range" min="5000" max="50000" value="24500" class="w-full mb-2">
-                        <div class="flex justify-between text-sm text-gray-600">
-                            <span>$5,000</span>
-                            <span class="font-semibold">$24,500</span>
-                            <span>$50,000</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-gray-700 mb-2">Loan Term</label>
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none">
-                            <option>24 months</option>
-                            <option selected>36 months</option>
-                            <option>48 months</option>
-                            <option>60 months</option>
-                            <option>72 months</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label class="block text-gray-700 mb-2">Interest Rate</label>
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none">
-                            <option>3.5% (Excellent Credit)</option>
-                            <option selected>4.5% (Good Credit)</option>
-                            <option>6.5% (Fair Credit)</option>
-                            <option>9.5% (Poor Credit)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="bg-gray-100 p-4 rounded-lg">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-semibold">Monthly Payment:</span>
-                            <span class="text-xl font-bold text-red-600">$420</span>
-                        </div>
-                        <p class="text-sm text-gray-600">Based on 36 months at 4.5% APR</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
