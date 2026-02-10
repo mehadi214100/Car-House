@@ -16,7 +16,3 @@ class UserLoginView(LoginView):
    
     def get_success_url(self):
         return reverse_lazy('home')
-
-
-class HomeView(TemplateView):
-    template_name = 'index.html'
